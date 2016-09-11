@@ -1,0 +1,12 @@
+/// Wraps
+/// @param  {list} $props  .
+
+@mixin themify($props) {
+  @each $name, $settings in $theme-settings {
+    .theme-#{$name} & {
+      @each $prop, $key in $props {
+        #{$prop}: map-get($settings, $key);
+      }
+    }
+  }
+}

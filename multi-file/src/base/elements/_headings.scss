@@ -1,0 +1,44 @@
+
+// Base styles
+@if $base {
+  h1,
+  .h1 {
+    font-size: 3rem;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: $primary-color;
+  }
+
+  h2,
+  .h2 {
+    font-size: 2.4rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.6rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.2rem;
+  }
+
+  h6,
+  .h6 {
+    font-size: 1rem;
+  }
+}
+
+// Themed styles
+@if $theme {
+  h1,
+  .h1 {
+    border-bottom-color: $primary-color;
+  }
+}

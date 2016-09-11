@@ -1,0 +1,26 @@
+{
+  "name": "sass-themes",
+  "version": "1.0.0",
+  "description": "Sass setups for generating themed CSS files.",
+  "main": "index.js",
+  "scripts": {
+    "start:multi-file": "node multi-file/server.js",
+    "start:single-file": "node single-file/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "theme",
+    "gulp"
+  ],
+  "author": "Ed Wright",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stats": "0.0.3",
+    "sassdoc": "^2.1.20"
+  }
+}

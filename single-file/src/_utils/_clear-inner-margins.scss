@@ -1,0 +1,14 @@
+/// Removes the top margin from the first-child, and the bottom margin from the
+/// last-child elements inside the container it is applied to. Can be used when
+/// the container's content is unknown (ie. populated from a CMS WYSIWYG field)
+/// and you don't want the content to affect the surrounding layout.
+/// @access public
+
+@mixin clear-inner-margins() {
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

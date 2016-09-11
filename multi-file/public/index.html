@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Multiple stylesheets</title>
+    <style>
+      body {
+        margin-top: 3.5rem;
+      }
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+      #theme-control {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        line-height: 2.5rem;
+        color: #fff;
+        background-color: #333;
+        text-align: center;
+      }
+      #theme-control button:actve {
+        background-color: #ccc;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+    <link id="theme-file" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="theme-control">
+        <span>Theme:</span>
+        <button data-theme="">Default</button>
+        <button data-theme="sport">Sport</button>
+        <button data-theme="tech">Tech</button>
+        <button data-theme="travel">Travel</button>
+      </div>
+
+      <h1>H1 Heading</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit vulputate velit, in rhoncus lorem tincidunt non. Aenean aliquet purus enim, quis pretium lorem rutrum a. Nunc tincidunt quam sit amet congue interdum. Maecenas efficitur lectus laoreet, congue enim ut, ultrices dolor. Proin nec nulla nunc. Phasellus fringilla quam nec diam ultricies, mattis sagittis ex placerat. Donec bibendum, risus eu tincidunt ultricies, sapien lorem fermentum velit, tincidunt tempor dui mi eget nibh.</p>
+
+      <h2>H2 Heading</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit vulputate velit, in rhoncus lorem tincidunt non. Aenean aliquet purus enim, quis pretium lorem rutrum a. Nunc tincidunt quam sit amet congue interdum. Maecenas efficitur lectus laoreet, congue enim ut, ultrices dolor. Proin nec nulla nunc. Phasellus fringilla quam nec diam ultricies, mattis sagittis ex placerat. Donec bibendum, risus eu tincidunt ultricies, sapien lorem fermentum velit, tincidunt tempor dui mi eget nibh.</p>
+
+      <h3>H3 Heading</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit vulputate velit, in rhoncus lorem tincidunt non. Aenean aliquet purus enim, quis pretium lorem rutrum a. Nunc tincidunt quam sit amet congue interdum. Maecenas efficitur lectus laoreet, congue enim ut, ultrices dolor. Proin nec nulla nunc. Phasellus fringilla quam nec diam ultricies, mattis sagittis ex placerat. Donec bibendum, risus eu tincidunt ultricies, sapien lorem fermentum velit, tincidunt tempor dui mi eget nibh.</p>
+
+      <h4>H4 Heading</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit vulputate velit, in rhoncus lorem tincidunt non. Aenean aliquet purus enim, quis pretium lorem rutrum a. Nunc tincidunt quam sit amet congue interdum. Maecenas efficitur lectus laoreet, congue enim ut, ultrices dolor. Proin nec nulla nunc. Phasellus fringilla quam nec diam ultricies, mattis sagittis ex placerat. Donec bibendum, risus eu tincidunt ultricies, sapien lorem fermentum velit, tincidunt tempor dui mi eget nibh.</p>
+
+      <h5>H5 Heading</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit vulputate velit, in rhoncus lorem tincidunt non. Aenean aliquet purus enim, quis pretium lorem rutrum a. Nunc tincidunt quam sit amet congue interdum. Maecenas efficitur lectus laoreet, congue enim ut, ultrices dolor. Proin nec nulla nunc. Phasellus fringilla quam nec diam ultricies, mattis sagittis ex placerat. Donec bibendum, risus eu tincidunt ultricies, sapien lorem fermentum velit, tincidunt tempor dui mi eget nibh.</p>
+
+      <h6>H6 Heading</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit vulputate velit, in rhoncus lorem tincidunt non. Aenean aliquet purus enim, quis pretium lorem rutrum a. Nunc tincidunt quam sit amet congue interdum. Maecenas efficitur lectus laoreet, congue enim ut, ultrices dolor. Proin nec nulla nunc. Phasellus fringilla quam nec diam ultricies, mattis sagittis ex placerat. Donec bibendum, risus eu tincidunt ultricies, sapien lorem fermentum velit, tincidunt tempor dui mi eget nibh.</p>
+
+      <h1>Buttons test</h1>
+      <a class="btn">My Button</a>
+
+      <script>
+        const btns = document.querySelectorAll('#theme-control button');
+        btns.forEach(btn => {
+          btn.addEventListener('click', e => {
+            const themeLink = document.getElementById('theme-file');
+            const theme = e.target.dataset.theme;
+            themeLink.href = theme.length ? `static/themes/${theme}.css` : '';
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

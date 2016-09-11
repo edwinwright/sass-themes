@@ -1,0 +1,23 @@
+/// Creates a grid row using flexible boxes. Columns will stretch to the same
+/// height, and wrap to the next line if there are too many for the row.
+/// @param  {length} $gutter  The gutter width.
+
+@mixin flex-row($gutter: $grid-gutter-width) {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter / -2);
+}
+
+/// Creates a grid column using flexible boxes. The column height will stretch
+/// to match the height of the tallest column in the row.
+/// @param  {number} $columns The number of grid columns to span.
+/// @param  {length} $gutter  The gutter width.
+
+@mixin flex-col($columns, $gutter: $grid-gutter-width) {
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+  width: percentage($columns / $grid-columns);
+}

@@ -1,0 +1,21 @@
+@import './palette';
+
+$theme-settings: (
+  'sport': (
+    'primary-color' : $apple,
+    'primary-tint'  : lighten($apple, 20%),
+    'primary-shade' : darken($apple, 20%),
+    'text-color'    : lighten($apple, 40%),
+  ),
+  'tech': (
+    'primary-color' : $royal-blue,
+    'primary-tint'  : lighten($royal-blue, 20%),
+    'text-color'    : lighten($royal-blue, 40%),
+  ),
+  'travel': (
+    'primary-color' : $cerise-red,
+    'primary-tint'  : lighten($cerise-red, 20%),
+    'primary-shade' : darken($cerise-red, 20%),
+    'text-color'    : $white,
+  )
+);
